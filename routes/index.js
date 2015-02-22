@@ -9,7 +9,6 @@ var root_views = __dirname + "/../views"
 
 module.exports = function(app){
 	app.get("^/[^/]*/$", function(req, res){
-		console.log(123123);
 		if( path.existsSync(root_views+req.url) ){
 			fs.writeFileSync( path.join(root_views+req.url+"index.html")
 				, markdown.makeHtml( fs.readFileSync(path.join(root_views+req.url+"index.md"),"utf-8") )
