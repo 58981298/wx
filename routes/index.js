@@ -17,8 +17,7 @@ module.exports = function(app){
 		} else {
 			res.send("Can I help you?");
 		}
-		
-	})
+	});
 	app.get("*", function(req, res){
 		res.send("Can I help you?");
 	});
